@@ -18,7 +18,8 @@ public class Livro {
         this.ano = ano;
         this.emprestado = false;
     }
-
+    
+//Fazer uma notação com um override para sobrepor esse toString, aqui não precisamos realizar um System.out.println, só chamar o toString
     @Override
     public String toString() {
         String status = emprestado ? "Emprestado" : "Disponivel"; //Codigo Ternario, onde se um for verdade entra em emprestado, se nao disponivel
