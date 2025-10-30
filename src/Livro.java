@@ -21,7 +21,7 @@ public class Livro {
 
     @Override
     public String toString() {
-        String status = emprestado ? "Emprestado" : "Disponivel";
+        String status = emprestado ? "Emprestado" : "Disponivel"; //Codigo Ternario, onde se um for verdade entra em emprestado, se nao disponivel
         return getTitulo() + " " + getAutor() + " " + getAno() + " " + status;
     }
 
