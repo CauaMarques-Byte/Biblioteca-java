@@ -5,7 +5,7 @@ public class Biblioteca {
     Scanner sc = new Scanner(System.in);
     ArrayList<Livro> livros = new ArrayList<Livro>();
 
-    public void cadastratLivro(Livro livro) {
+    public void cadastrarLivro(Livro livro) {
         livros.add(livro);
         System.out.println(livro);
     }
@@ -15,17 +15,20 @@ public class Biblioteca {
         System.out.println(livros);
     }
 
-    public Livro buscarLivro(Livro livro) {
-        for (Livro livrosbi : livros) {
-            if (livro.equals(livro)) {
+    public Livro buscarLivro(String titulo) {
+        for (Livro livro : livros) {
+            // ✅ Verifica se o título não é null antes de comparar
+            if (livro.getTitulo() != null && livro.getTitulo().equalsIgnoreCase(titulo)) {
                 return livro;
             }
         }
         return null;
     }
 
-    public void emprestarLivro(Livro livro) {
-        Livro livros = buscarLivro(livro);
+
+
+    public void emprestarLivro(String titulo) {
+        Livro livro = buscarLivro(titulo);
         if (livro != null && !livro.isEmprestado()) {
             livro.setEmprestado(true);
             System.out.println("Livro emprestado com sucesso!");
@@ -36,8 +39,8 @@ public class Biblioteca {
 
     int escolher = 0;
 
-    public void devolverLivro(Livro livro) {
-        Livro livrosb = buscarLivro(livro);
+    public void devolverLivro(String titulo) {
+        Livro livro = buscarLivro(titulo);
         if (livro != null && livro.isEmprestado()) {
             livro.setEmprestado(false);
             System.out.println("Livro devolvido com sucesso!");

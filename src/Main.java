@@ -5,13 +5,9 @@ public class Main {
 
         Biblioteca biblioteca = new Biblioteca();
 
-        biblioteca.cadastratLivro(livro1);
+        Menu menu = new Menu();
 
-        biblioteca.buscarLivro(livro1);
-
-        biblioteca.emprestarLivro(livro1);
-
-        biblioteca.devolverLivro(livro1);
+        menu.iniciar();
 
 
     }

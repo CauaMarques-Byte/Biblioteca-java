@@ -6,10 +6,10 @@ public class Livro {
     boolean emprestado;
 
     public Livro (String titulo, String autor, int ano, boolean emprestado){
-        this.titulo = titulo;
-        this.autor = autor;
-        this.ano = ano;
-        this.emprestado = emprestado;
+        this.titulo = "";
+        this.autor = "";
+        this.ano = 0;
+        this.emprestado = false;
     }
 
     public Livro (){
