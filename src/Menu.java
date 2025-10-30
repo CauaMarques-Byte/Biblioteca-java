@@ -22,14 +22,14 @@ public class Menu {
             System.out.print("Escolha uma opção: ");
 
             opcao = sc.nextInt();
-            sc.nextLine(); // ✅ LIMPAR BUFFER - IMPORTANTE!
+            sc.nextLine();
 
             switch (opcao) {
                 case 1:
                     cadastrarLivro();
                     break;
                 case 2:
-                    biblioteca.listarLivros(); // ⚠️ Precisa criar este método
+                    biblioteca.listarLivros();
                     break;
                 case 3:
                     buscarLivro();
@@ -55,16 +55,15 @@ public class Menu {
         System.out.println("\n=== 📚 CADASTRAR NOVO LIVRO ===");
 
         System.out.print("Título: ");
-        String titulo = sc.nextLine(); // ✅ nextLine() para textos completos
+        String titulo = sc.nextLine();
 
         System.out.print("Autor: ");
         String autor = sc.nextLine();
 
         System.out.print("Ano de publicação: ");
         int anoPublicacao = sc.nextInt();
-        sc.nextLine(); // ✅ Limpar buffer após nextInt()
+        sc.nextLine();
 
-        // ✅ Criar livro COM DADOS usando construtor com parâmetros
         Livro novoLivro = new Livro(titulo, autor, anoPublicacao, false);
         biblioteca.cadastrarLivro(novoLivro);
 
