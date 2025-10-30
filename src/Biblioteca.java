@@ -17,7 +17,6 @@ public class Biblioteca {
 
     public Livro buscarLivro(String titulo) {
         for (Livro livro : livros) {
-            // ✅ Verifica se o título não é null antes de comparar
             if (livro.getTitulo() != null && livro.getTitulo().equalsIgnoreCase(titulo)) {
                 return livro;
             }
